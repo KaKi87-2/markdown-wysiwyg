@@ -1,0 +1,87 @@
+@import 'https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.min.css';
+
+:root {
+    --onedark-red: #E06C75;
+    --onedark-green: #98C379;
+    --onedark-yellow: #E5C07B;
+    --onedark-dark-yellow: #D19A66;
+    --onedark-blue: #61AFEF;
+    --onedark-purple: #C678DD;
+    --onedark-cyan: #56B6C2;
+    --onedark-foreground: #ABB2BF;
+    --onedark-background: #282C34;
+    --onedark-comment-grey: #5C6370;
+    --onedark-special-grey: #3B4048;
+
+    color-scheme: dark;
+}
+
+textarea {
+    outline: none;
+    resize: none;
+}
+
+.app {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: var(--onedark-background);
+    color: var(--onedark-foreground);
+    font-family: monospace;
+    padding: 1rem;
+    display: grid;
+}
+
+.app__input,
+.app__output {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.app__input {
+    color: transparent;
+    caret-color: var(--onedark-foreground);
+    background: transparent;
+}
+
+.app__input::selection {
+    color: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app__output {
+    pointer-events: none;
+    white-space: pre;
+}
+
+.app__output__line:empty:before {
+    content: ' ';
+}
+
+.app__output__line__item--markup {
+    color: var(--onedark-comment-grey);
+}
+
+.app__output__line__item--bold {
+    font-weight: bold;
+}
+
+.app__output__line__item--italic {
+    font-style: italic;
+}
+
+.app__output__line__item--strikethrough {
+    text-decoration: line-through;
+}
+
+.app__output__line__item--hyperlinkText {
+    color: var(--onedark-blue);
+}
+
+.app__output__line__item--hyperlinkAddress {
+    text-decoration: underline;
+}
+
+.app__output__line__item--code {
+    background-color: var(--onedark-special-grey);
+    outline: 1px solid var(--onedark-special-grey);
+    border-radius: 0.1rem;
+}
