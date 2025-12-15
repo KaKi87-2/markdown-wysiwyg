@@ -1,4 +1,4 @@
-import { tokenize } from 'https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.0-gpt5-jb-ghcp';
+import { tokenize } from 'https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.1-claude4.5-kiro';
 
 const
     styledFormatting = [
