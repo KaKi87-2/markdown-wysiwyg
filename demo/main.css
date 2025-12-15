@@ -80,7 +80,8 @@ textarea {
     text-decoration: underline;
 }
 
-.app__output__line__item--code {
+.app__output__line__item--code,
+.app__output__line__item--codeblock:not(.app__output__line__item--markup) {
     background-color: var(--onedark-special-grey);
     outline: 1px solid var(--onedark-special-grey);
     border-radius: 0.1rem;
