@@ -1,4 +1,4 @@
-import { tokenize } from 'https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.1-claude4.5-kiro';
+import { tokenize } from 'https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.3-gemini3flash-antigravity';
 
 const
     styledFormatting = [
@@ -12,7 +12,8 @@ const
         'code'
     ],
     multilineUnstyledFormatting = [
-        'codeblock'
+        'codeblock',
+        'quote'
     ];
 
 export default text => {
