@@ -4,7 +4,7 @@ export default ({
     inputElement,
     outputElementClassName,
     outputLineElementClassName = `${outputElementClassName}__line`,
-    getOutputLineItemElementClassName,
+    getOutputLineItemElementClassName = style => `${outputLineElementClassName}__item${style ? `--${style}` : ''}`,
     fontFamily = 'monospace',
     fontSize
 }) => {
