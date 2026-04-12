@@ -47,7 +47,8 @@ export default ({
         zIndex: '1000',
         pointerEvents: 'none',
         fontFamily,
-        fontSize
+        fontSize,
+        lineHeight: style.lineHeight
     });
     Object.assign(inputElement.style, {
         fontFamily,
