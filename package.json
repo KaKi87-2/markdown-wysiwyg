@@ -1,0 +1,8 @@
+{
+  "name": "markdown-wysiwyg",
+  "version": "0.1.0",
+  "main": "mod.js",
+  "repository": "https://git.kaki87.net/KaKi87/markdown-wysiwyg.git",
+  "author": "KaKi87 <KaKi87@proton.me>",
+  "license": "MIT"
+}
