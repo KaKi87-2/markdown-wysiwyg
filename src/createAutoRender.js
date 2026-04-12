@@ -45,7 +45,6 @@ export default ({
         height: `${height - paddingTop - paddingBottom - borderTop - borderBottom}px`,
         boxSizing: 'border-box',
         zIndex: '1000',
-        pointerEvents: 'none',
         fontFamily,
         fontSize,
         lineHeight: style.lineHeight

@@ -1,11 +1,14 @@
 import createRender from '../src/createRender.js';
+import generateCss from '../src/generateCss.js';
 
 const
     inputMarkdown = localStorage.getItem('inputMarkdown'),
-    inputElement = document.querySelector('.app__input'),
+    inputElementClassName = '.app__input',
+    inputElement = document.querySelector(inputElementClassName),
+    lineElementClassName = 'app__output__line',
     render = createRender({
         outputElement: document.querySelector('.app__output'),
-        lineElementClassName: 'app__output__line'
+        lineElementClassName
     });
 
 if(inputMarkdown){
@@ -18,3 +21,10 @@ inputElement.addEventListener('input', () => {
     localStorage.setItem('inputMarkdown', inputMarkdown);
     render(inputMarkdown);
 });
+
+const css = new CSSStyleSheet();
+css.replaceSync(generateCss({
+    inputElementClassName,
+    lineElementClassName
+}));
+document.adoptedStyleSheets.push(css);
