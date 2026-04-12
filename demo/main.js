@@ -3,11 +3,12 @@ import generateCss from '../src/generateCss.js';
 
 const
     inputMarkdown = localStorage.getItem('inputMarkdown'),
-    inputElementClassName = '.app__input',
-    inputElement = document.querySelector(inputElementClassName),
+    inputElementClassName = 'app__input',
+    inputElement = document.querySelector(`.${inputElementClassName}`),
+    outputElementClassName = 'app__output',
     outputLineElementClassName = 'app__output__line',
     render = createRender({
-        outputElement: document.querySelector('.app__output'),
+        outputElement: document.querySelector(`.${outputElementClassName}`),
         outputLineElementClassName
     });
 
@@ -25,6 +26,6 @@ inputElement.addEventListener('input', () => {
 const css = new CSSStyleSheet();
 css.replaceSync(generateCss({
     inputElementClassName,
-    outputLineElementClassName
+    outputElementClassName
 }));
 document.adoptedStyleSheets.push(css);
