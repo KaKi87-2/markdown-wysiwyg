@@ -8,5 +8,6 @@
   "dependencies": {
     "@speed-highlight/core": "^1.2.15",
     "markdown-tokens": "^0.1.3-gemini3flash-antigravity"
-  }
+  },
+  "type": "module"
 }
