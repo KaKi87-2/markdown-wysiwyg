@@ -6,6 +6,14 @@
     <title>Markdown WYSIWYG editor</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" type="module"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "@speed-highlight/core": "https://cdn.jsdelivr.net/npm/@speed-highlight/core/dist/index.js",
+                "markdown-tokens": "https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.3-gemini3flash-antigravity"
+            }
+        }
+    </script>
 </head>
 <body class="app">
     <div class="app__output"></div>

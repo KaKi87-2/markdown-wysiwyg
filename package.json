@@ -4,5 +4,9 @@
   "main": "mod.js",
   "repository": "https://git.kaki87.net/KaKi87/markdown-wysiwyg.git",
   "author": "KaKi87 <KaKi87@proton.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@speed-highlight/core": "^1.2.15",
+    "markdown-tokens": "^0.1.3-gemini3flash-antigravity"
+  }
 }

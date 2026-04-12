@@ -1,4 +1,4 @@
-import { tokenize } from 'https://cdn.jsdelivr.net/npm/markdown-tokens@0.1.3-gemini3flash-antigravity';
+import { tokenize } from 'markdown-tokens';
 
 const
     styledFormatting = [

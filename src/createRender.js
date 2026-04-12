@@ -1,4 +1,4 @@
-import { highlightText } from 'https://cdn.jsdelivr.net/npm/@speed-highlight/core/dist/index.js';
+import { highlightText } from '@speed-highlight/core';
 
 import parseMarkdown from './parseMarkdown.js';
 
