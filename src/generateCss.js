@@ -32,7 +32,7 @@ export default ({
     
     .${outputElementClassName} {
         pointer-events: none;
-        white-space: pre;
+        white-space: pre-wrap;
     }
 
     .${outputLineElementClassName}:empty:before {
