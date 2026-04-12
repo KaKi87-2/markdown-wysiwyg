@@ -5,10 +5,10 @@ const
     inputMarkdown = localStorage.getItem('inputMarkdown'),
     inputElementClassName = '.app__input',
     inputElement = document.querySelector(inputElementClassName),
-    lineElementClassName = 'app__output__line',
+    outputLineElementClassName = 'app__output__line',
     render = createRender({
         outputElement: document.querySelector('.app__output'),
-        lineElementClassName
+        outputLineElementClassName
     });
 
 if(inputMarkdown){
@@ -25,6 +25,6 @@ inputElement.addEventListener('input', () => {
 const css = new CSSStyleSheet();
 css.replaceSync(generateCss({
     inputElementClassName,
-    lineElementClassName
+    outputLineElementClassName
 }));
 document.adoptedStyleSheets.push(css);

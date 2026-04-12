@@ -3,8 +3,8 @@ import createRender from './createRender.js';
 export default ({
     inputElement,
     outputElementClassName,
-    lineElementClassName = `${outputElementClassName}__line`,
-    getItemElementClassName,
+    outputLineElementClassName = `${outputElementClassName}__line`,
+    getOutputLineItemElementClassName,
     fontFamily = 'monospace',
     fontSize
 }) => {
@@ -30,8 +30,8 @@ export default ({
         borderBottom = parseFloat(style.borderBottomWidth) || 0,
         render = createRender({
             outputElement,
-            lineElementClassName,
-            getItemElementClassName
+            outputLineElementClassName,
+            getOutputLineItemElementClassName
         }),
         getInputValue = () => inputElement.tagName === 'TEXTAREA' ? inputElement.value : inputElement.innerText;
     if(!fontSize)

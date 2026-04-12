@@ -4,19 +4,19 @@ import parseMarkdown from './parseMarkdown.js';
 
 export default ({
     outputElement,
-    lineElementClassName,
-    getItemElementClassName = style => `${lineElementClassName}__item${style ? `--${style}` : ''}`,
+    outputLineElementClassName,
+    getOutputLineItemElementClassName = style => `${outputLineElementClassName}__item${style ? `--${style}` : ''}`,
 }) => async markdown => {
     const result = parseMarkdown(markdown);
     outputElement.innerHTML = '';
     let lastCodeblockLanguage;
     for(const line of result){
         const lineElement = document.createElement('p');
-        lineElement.classList.add(lineElementClassName);
+        lineElement.classList.add(outputLineElementClassName);
         for(const item of line){
             const itemElement = document.createElement('span');
-            itemElement.classList.add(getItemElementClassName(), ...item.styles.map(style => getItemElementClassName(style)));
-            itemElement.classList.toggle(getItemElementClassName('markup'), item.isMarkup);
+            itemElement.classList.add(getOutputLineItemElementClassName(), ...item.styles.map(style => getOutputLineItemElementClassName(style)));
+            itemElement.classList.toggle(getOutputLineItemElementClassName('markup'), item.isMarkup);
             if(item.styles.includes('codeblockLanguage'))
                 lastCodeblockLanguage = item.content;
             if(item.styles.includes('codeblock') && !item.isMarkup)

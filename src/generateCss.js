@@ -1,8 +1,8 @@
 export default ({
     inputElementClassName,
     outputElementClassName,
-    lineElementClassName = `${outputElementClassName}__line`,
-    getItemElementClassName = style => `${lineElementClassName}__item${style ? `--${style}` : ''}`
+    outputLineElementClassName = `${outputElementClassName}__line`,
+    getOutputLineItemElementClassName = style => `${outputLineElementClassName}__item${style ? `--${style}` : ''}`
 }) => /*language=CSS*/ `
     .${inputElementClassName},
     .${outputElementClassName} {
@@ -35,45 +35,45 @@ export default ({
         white-space: pre;
     }
 
-    .${lineElementClassName}:empty:before {
+    .${outputLineElementClassName}:empty:before {
         content: ' ';
     }
     
-    .${lineElementClassName}__item--markup {
+    .${outputLineElementClassName}__item--markup {
         color: var(--onedark-comment-grey);
     }
     
-    .${getItemElementClassName('bold')} {
+    .${getOutputLineItemElementClassName('bold')} {
         font-weight: bold;
     }
     
-    .${getItemElementClassName('italic')} {
+    .${getOutputLineItemElementClassName('italic')} {
         font-style: italic;
     }
     
-    .${getItemElementClassName('strikethrough')} {
+    .${getOutputLineItemElementClassName('strikethrough')} {
         text-decoration: line-through;
     }
     
-    .${getItemElementClassName('hyperlinkText')} {
+    .${getOutputLineItemElementClassName('hyperlinkText')} {
         color: var(--onedark-blue);
     }
     
-    .${getItemElementClassName('hyperlinkAddress')} {
+    .${getOutputLineItemElementClassName('hyperlinkAddress')} {
         text-decoration: underline;
     }
     
-    .${getItemElementClassName('code')},
-    .${getItemElementClassName('codeblock')}:not(.${getItemElementClassName('markup')}) {
+    .${getOutputLineItemElementClassName('code')},
+    .${getOutputLineItemElementClassName('codeblock')}:not(.${getOutputLineItemElementClassName('markup')}) {
         background-color: var(--onedark-special-grey);
     }
     
-    .${getItemElementClassName('code')} {
+    .${getOutputLineItemElementClassName('code')} {
         border-radius: 0.1rem;
         outline: 1px solid var(--onedark-special-grey);
     }
     
-    .${getItemElementClassName('codeblock')}:not(.${getItemElementClassName('markup')}) {
+    .${getOutputLineItemElementClassName('codeblock')}:not(.${getOutputLineItemElementClassName('markup')}) {
         display: inline-block;
         box-shadow: -2px 0 0 0 var(--onedark-special-grey), 2px 0 0 0 var(--onedark-special-grey);
     }
