@@ -6,7 +6,8 @@ export default ({
     outputLineElementClassName = `${outputElementClassName}__line`,
     getOutputLineItemElementClassName = style => `${outputLineElementClassName}__item${style ? `--${style}` : ''}`,
     fontFamily = 'monospace',
-    fontSize
+    fontSize,
+    zIndex
 }) => {
     let isAutoRender = false;
     const
@@ -43,11 +44,10 @@ export default ({
         left: `${left + marginLeft + borderLeft + paddingLeft + window.scrollX}px`,
         width: `${width - paddingLeft - paddingRight - borderLeft - borderRight}px`,
         height: `${height - paddingTop - paddingBottom - borderTop - borderBottom}px`,
-        boxSizing: 'border-box',
-        zIndex: '1000',
+        lineHeight: style.lineHeight,
         fontFamily,
         fontSize,
-        lineHeight: style.lineHeight
+        zIndex
     });
     Object.assign(inputElement.style, {
         fontFamily,

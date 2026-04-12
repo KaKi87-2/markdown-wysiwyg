@@ -31,6 +31,7 @@ export default ({
     }
     
     .${outputElementClassName} {
+        box-sizing: border-box;
         pointer-events: none;
         white-space: pre-wrap;
     }
